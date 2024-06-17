@@ -1,3 +1,4 @@
+const HASH_PASS ="db36f96abf366f9e28583fe898ce814e4bc480102aa2e276eec4a28227588704";
 const PASSWORD = "UMASENHA";
 const PLACEHOLDER_IMAGE = 'placeholder.png'; // Caminho para a imagem placeholder
 let playersData = [];
