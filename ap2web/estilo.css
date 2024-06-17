@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#login-page, #main-page, #player-details-page {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Página de Login */
+#login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    #login-page {
+        height: auto;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Cor de fundo preta */
+    color: white;
+    padding: 10px 20px; /* Ajuste de padding */
+    position: relative;
+}
+
+header h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    font-size: 24px;
+}
+
+header button {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    background-color: #f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header img#botafogo-logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Seleção de elenco da Página Principal */
+.buttons {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif; /* Fonte aplicada */
+    font-weight: 400; /* Peso da fonte */
+    font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+    }
+    .buttons button {
+        display: none;
+    }
+    .buttons select {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .buttons select {
+        display: none;
+    }
+}
+
+.search-bar {
+    margin: 2rem 0;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    width: 20rem;
+}
+
+/* Container de atletas da Página Principal */
+.players-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.player-card {
+    background-color: white;
+    border: 0.0625rem solid #ddd;
+    margin: 0.625rem;
+    padding: 0.625rem;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Adicionado para suavizar a transição */
+}
+
+.player-card img {
+    width: 100%;
+    height: auto;
+}
+
+.player-card button {
+    background-color: yellow;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif; /* Fonte aplicada */
+    font-weight: 400; /* Peso da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+/* Layout para diferentes tamanhos de viewport */
+@media (max-width: 768px) {
+    .player-card {
+        width: calc(100% - 1.25rem); /* Ajuste para margem, alterado para rem */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .player-card {
+        width: calc(50% - 1.25rem); /* Ajuste para margem, alterado para rem */
+    }
+}
+
+@media (min-width: 1025px) {
+    .player-card {
+        width: calc(25% - 1.25rem); /* Ajuste para margem, alterado para rem */
+    }
+}
+
+/* Página Detalhes */
+#player-details-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    #player-details-page {
+        height: auto;
+    }
+}
+
+.player-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.625rem;
+    max-width: 50rem;
+}
+
+.player-image img {
+    max-width: 18.75rem;
+    height: auto;
+    border-radius: 0.625rem;
+}
+
+.player-info {
+    margin-left: 1.25rem;
+    text-align: left;
+}
+
+.player-info h2 {
+    margin-top: 0;
+}
+
+.player-info p {
+    margin: 0.3125rem 0;
+}
+
+.player-info a {
+    display: inline-block;
+    margin-top: 0.625rem;
+    padding: 0.625rem 1.25rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+}
+
+.player-info a:hover {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .player-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player-info {
+        margin-left: 0;
+        margin-top: 1.25rem;
+        text-align: center;
+    }
+}
