@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atletas do Botafogo em 2024-1</title>
+    <title id="titulo">Atletas do Botafogo em 2024-1</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');</style>
+    <link rel="icon" href="https://github.com/ibmec-tec/p2-desenvolvimento-web-2024-1/blob/main/escudo.png?raw=true" type="image/png">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -31,15 +33,17 @@
             <button onclick="loadPlayers('masculino')">Masculino</button>
             <button onclick="loadPlayers('feminino')">Feminino</button>
         </div>
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="BUSQUE POR NOME" onkeyup="searchPlayer()">
+        <!-- Dentro da div com a classe search-bar -->
+        <div class="search-bar" style="margin: 2rem auto; max-width: 20rem; text-align: center;">
+            <input type="text" id="search" placeholder="BUSQUE POR NOME" onkeyup="searchPlayer()" style="padding: 0.5rem; width: 100%;">
         </div>
+
         <div id="players-container" class="players-container"></div>
     </div>
 
     <!-- Player Details Page -->
-    <div id="player-details-page" style="display: none;">
-        <button onclick="backToMain()">Voltar</button>
+    <div id="player-details-page" style="display: none; justify-content: center; align-items: center; text-align: center;">
+        <button onclick="backToMain()" style="margin-top: 20px;">Voltar</button>
         <div id="player-details"></div>
     </div>
 
